@@ -104,7 +104,7 @@
 
   </header>
 
-  <main class="main" id="main-content">
+  <main class="main p-5 mt-5" id="main-content">
 
   </main>
 
@@ -181,7 +181,8 @@
 
     <div class="container copyright text-center mt-4">
       <p><span>Fábula Dental®</span> <strong class="px-1 sitename">Fábula Dental Valle de los Chillos</strong>|
-        <span>Todos los derechos reservados</span></p>
+        <span>Todos los derechos reservados</span>
+      </p>
     </div>
 
   </footer>
@@ -204,10 +205,8 @@
   <script src="./public/vendor/template/assets/vendor/swiper/swiper-bundle.min.js"></script>
   <!-- Main JS File -->
   <script src="./public/vendor/template/assets/js/main.js"></script>
-
-  <script src="./public/js/java_function.js">
-    loadPage(new Event('load'), './view/home.html');
-  </script>
+  <!-- Load page script moved to external file for better maintenance -->
+  <script src="./public/js/java_function.js"></script>
 
 </body>
 
