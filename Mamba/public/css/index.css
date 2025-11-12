@@ -3,3 +3,71 @@
     font-size: 20px;    
     margin: 20px 0;
 }
+
+.fuente-de-texto1{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    
+}
+.fuente-texto2{
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-bottom: -4rem;
+    font-size:medium;
+}
+
+.hero {
+  position: relative;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.masthead {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.masthead::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45); 
+}
+
+.site-heading {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding-top: 25vh; 
+}
+
+.btn-get-started {
+  background-color: #00bcd4;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  
+}
+
+.btn-get-started:hover {
+  background-color: #0097a7;
+}
+
+.imagen-dentista{
+    clip-path: inset(10px 0 50px 0); 
+}
+
+.card-body{
+    margin-top: 50px;
+    zoom: 200 px;
+    text-align: justify;
+}

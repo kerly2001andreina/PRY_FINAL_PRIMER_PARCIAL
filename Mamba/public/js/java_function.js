@@ -18,5 +18,6 @@ function loadPage(event, url) {
         .catch(error => {
             console.error('Error loading page:', error);
         });
+        
 
 }

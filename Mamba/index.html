@@ -205,9 +205,15 @@
   <!-- Main JS File -->
   <script src="./public/vendor/template/assets/js/main.js"></script>
 
-  <script src="./public/js/java_function.js">
-    loadPage(new Event('load'), './view/home.html');
+  <script src="./public/js/java_function.js"></script>
+  <script>
+    
+    window.addEventListener("DOMContentLoaded", () => {
+      
+      loadPage({ preventDefault: () => {} }, './view/home.html');
+    });
   </script>
+
 
 </body>
 
