@@ -16,6 +16,25 @@
         const main = document.getElementById('main-content') || document.querySelector('main');
         if (main) {
           main.innerHTML = html;
+
+          // Si la URL incluye un fragmento (hash), hacer scroll al elemento objetivo
+          try {
+            const parsed = new URL(targetUrl, location.href);
+            const hash = parsed.hash; // incluye '#'
+            if (hash) {
+              const id = hash.slice(1);
+              // esperar un frame para que el contenido esté insertado y layout realizado
+              requestAnimationFrame(() => {
+                const el = document.getElementById(id) || document.querySelector(id ? `.${id}` : null);
+                if (el) {
+                  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              });
+            }
+          } catch (e) {
+            // Si targetUrl no es parseable por URL, ignorar
+          }
+
         } else {
           console.warn('Elemento <main> no encontrado para insertar la página.');
         }

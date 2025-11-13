@@ -29,6 +29,8 @@
 
   <!-- Main CSS File -->
   <link href="./public/vendor/template/assets/css/main.css" rel="stylesheet">
+  <!-- Custom site CSS -->
+  <link href="./public/css/index.css" rel="stylesheet">
 </head>
 
 <body class="index-page">
@@ -67,10 +69,11 @@
             <li><a href="./view/services.html" onclick="loadPage(event, this.href)">Servicios</a></li>
             <li><a href="./view/portfolio.html" onclick="loadPage(event, this.href)">Portafolio</a></li>
             <li><a href="./view/team.html" onclick="loadPage(event, this.href)">Equipo</a></li>
-            <li class="dropdown"><a href="#"><span>Desplegable</span> <i
+            <li class="dropdown"><a href="#"><span>PRIMERA VISITA</span> <i
                   class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="#">Desplegable 1</a></li>
+                <li><a href="./view/faq.html" onclick="loadPage(event, this.href)">PREGUNTAS FRECUENTES</a></li>
                 <li class="dropdown"><a href="#"><span>Desplegable Profundo</span> <i
                       class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
@@ -199,8 +202,16 @@
   <!-- Main JS File -->
   <script src="./public/vendor/template/assets/js/main.js"></script>
   <script src="./public/vendor/bootstrap-5/js/bootstrap.min.js"></script>
-  <!-- Load page script moved to external file for better maintenance -->
+
   <script src="./public/js/java_function.js"></script>
+  <script>
+    
+    window.addEventListener("DOMContentLoaded", () => {
+      
+      loadPage({ preventDefault: () => {} }, './view/home.html');
+    });
+  </script>
+
 
 </body>
 
