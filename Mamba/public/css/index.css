@@ -1,40 +1,41 @@
 .horario_atencion {
-    text-align: center;
-    font-size: 20px;    
-    margin: 20px 0;
-}
-
-.fuente-de-texto1{
-    text-align: center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    letter-spacing: 2px;
-    
-}
-.fuente-texto2{
-    text-align: center;
-    margin-top: 2rem;
-    margin-left: 6rem;
-    margin-right: 6rem;
-    margin-bottom: -4rem;
-    font-size:medium;
-}
-
-.fuente-texto3{
   text-align: center;
-  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.fuente-de-texto1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+}
+
+.fuente-texto2 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  margin-bottom: -4rem;
+  font-size: medium;
+}
+
+.fuente-texto3 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(9, 0, 0);
   font-size: 15px;
   text-shadow:
     -1px -1px 0 #ffffff,
-     1px -1px 0 #ffffff,
-    -1px  1px 0 #ffffff,
-     1px  1px 0 #ffffff;
+    1px -1px 0 #ffffff,
+    -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff;
 }
 
 .hero {
   position: relative;
-  height: 100vh; 
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -44,21 +45,21 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
-  
+
 }
 
 .masthead::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.45); 
+  background-color: rgba(0, 0, 0, 0.45);
 }
 
 .site-heading {
   position: relative;
   text-align: center;
   color: #fff;
-  padding-top: 25vh; 
+  padding-top: 25vh;
 }
 
 .btn-get-started {
@@ -68,27 +69,44 @@
   border-radius: 30px;
   font-weight: bold;
   transition: background-color 0.3s;
-  
+
 }
 
 .btn-get-started:hover {
   background-color: #0097a7;
 }
 
-.imagen-dentista{
-    clip-path: inset(10px 0 50px 0); 
+.imagen-dentista {
+  clip-path: inset(10px 0 50px 0);
 }
 
-.card-body{
+.card-body {
   margin-top: 1rem;
   text-align: justify;
 }
 
-.servicios-img{
+.servicios-img {
   width: 100%;
-  max-width: 300px;       
-  height: 300px;          
-  object-fit: cover;      
-  border-radius: 15px;    
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
   box-shadow: 0 4px 10px rgba(9, 25, 98, 0.15);
 }
+
+/* Quitar viñetas y resetear padding/margen por defecto en listas */
+.list-unstyled {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Alternativa: aplicar globalmente a todas las UL dentro del footer o nav si se desea */
+/*
+footer ul,
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+*/
