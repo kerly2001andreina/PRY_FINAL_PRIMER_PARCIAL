@@ -1,155 +1,243 @@
-<!-- Portfolio Section -->
-<section id="portfolio" class="portfolio section">
+<!DOCTYPE html>
+<html lang="es">
 
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-    </div><!-- End Section Title -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/vendor/template/assets/css/main.css">
+    <link rel="stylesheet" href="../public/vendor/bootstrap-5/css/bootstrap.min.css">
+    <title>Portafolio</title>
+</head>
 
-    <div class="container">
+<body>
+    <header></header>
+    <main>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio section">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Portafolio</h2>
+                <p>Nuestra seccion de productos odontologicos,aca podemos encontrar una variedad de tratamientos y
+                    productos para el cuidado dental.</p>
+            </div><!-- End Section Title -->
+            <div class="container">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-            <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-app">App</li>
-                <li data-filter=".filter-product">Card</li>
-                <li data-filter=".filter-branding">Web</li>
-            </ul><!-- End Portfolio Filters -->
+                    <input type="hidden" name="portfolio-filter" id="filter-all" checked>
+                    <input type="hidden" name="portfolio-filter" id="filter-app">
+                    <input type="hidden" name="portfolio-filter" id="filter-product">
+                    <input type="hidden" name="portfolio-filter" id="filter-branding">
 
-            <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+                    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                        <li><label for="filter-all" checked>Todos</label></li>
+                        <li><label for="filter-app">Tratamientos</label></li>
+                        <li><label for="filter-product">Productos</label></li>
+                        <li><label for="filter-branding">Casos clínicos</label></li>
+                    </ul><!-- End Portfolio Filters -->
 
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                    <img src="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-1.jpg"
-                        class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>App 1</h4>
-                        <p>Lorem ipsum, dolor sit</p>
-                        <a href="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-1.jpg"
-                            title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                class="bi bi-zoom-in"></i></a>
-                        <a href="./portfolio-details.html" title="More Details" class="details-link"><i
-                                class="bi bi-link-45deg"></i></a>
-                    </div>
-                </div><!-- End Portfolio Item -->
+                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                    <img src="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
-                        class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>Product 1</h4>
-                        <p>Lorem ipsum, dolor sit</p>
-                        <a href="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
-                            title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                                class="bi bi-zoom-in"></i></a>
-                        <a href="./portfolio-details.html" title="More Details" class="details-link"><i
-                                class="bi bi-link-45deg"></i></a>
-                    </div>
-                </div><!-- End Portfolio Item -->
+                        <!-- Tratamientos -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <img src="../public/img/limpieza-ultrasonidos.jpg"
+                                class="img-fluid" alt="Limpieza dental profesional">
+                            <div class="portfolio-info">
+                                <h4>Limpieza Profesional</h4>
+                                <p>Profilaxis con ultrasonido y pulido.</p>
+                                <a href="../public/img/limpieza-ultrasonidos.jpg"
+                                    title="Limpieza Profesional" data-gallery="portfolio-gallery-tratamientos"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="../portfolio-details.html" title="Más detalles" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                    <img src="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-3.jpg"
-                        class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>Branding 1</h4>
-                        <p>Lorem ipsum, dolor sit</p>
-                        <a href="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-3.jpg"
-                            title="Branding 1" data-gallery="portfolio-gallery-branding"
-                            class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                        <a href="./portfolio-details.html" title="More Details" class="details-link"><i
-                                class="bi bi-link-45deg"></i></a>
-                    </div>
-                </div><!-- End Portfolio Item -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <img src="../public/img/ortodoncia-estética.jpg"
+                                class="img-fluid" alt="Ortodoncia estética con brackets de zafiro">
+                            <div class="portfolio-info">
+                                <h4>Ortodoncia Estética</h4>
+                                <p>Brackets de zafiro y alineadores.</p>
+                                <a href="../public/img/ortodoncia-estética.jpg"
+                                    title="Ortodoncia Estética" data-gallery="portfolio-gallery-tratamientos"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="../portfolio-details.html" title="Más detalles" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                    <img src="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-4.jpg"
-                        class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>App 2</h4>
-                        <p>Lorem ipsum, dolor sit</p>
-                        <a href="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-4.jpg"
-                            title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                class="bi bi-zoom-in"></i></a>
-                        <a href="./portfolio-details.html" title="More Details" class="details-link"><i
-                                class="bi bi-link-45deg"></i></a>
-                    </div>
-                </div><!-- End Portfolio Item -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <img src="../public/img/blanqueamiento-LED.jpg"
+                                class="img-fluid" alt="Blanqueamiento dental con lámpara LED">
+                            <div class="portfolio-info">
+                                <h4>Blanqueamiento LED</h4>
+                                <p>Sesión única con lámpara fría.</p>
+                                <a href="../public/img/blanqueamiento-LED.jpg"
+                                    title="Blanqueamiento LED" data-gallery="portfolio-gallery-tratamientos"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="../portfolio-details.html" title="Más detalles" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                    <img src="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-5.jpg"
-                        class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>Product 2</h4>
-                        <p>Lorem ipsum, dolor sit</p>
-                        <a href="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-5.jpg"
-                            title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                                class="bi bi-zoom-in"></i></a>
-                        <a href="./portfolio-details.html" title="More Details" class="details-link"><i
-                                class="bi bi-link-45deg"></i></a>
-                    </div>
-                </div><!-- End Portfolio Item -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <img src="../public/img/sellantes-pediátricos.jpg" class="img-fluid"
+                                alt="Sellantes dentales pediátricos">
+                            <div class="portfolio-info">
+                                <h4>Sellantes Pediátricos</h4>
+                                <p>Prevención de caries en molares.</p>
+                                <a href="../public/img/sellantes-pediátricos.jpg" title="Sellantes Pediátricos"
+                                    data-gallery="portfolio-gallery-tratamientos" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="../portfolio-details.html" title="Más detalles" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                    <img src="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-6.jpg"
-                        class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>Branding 2</h4>
-                        <p>Lorem ipsum, dolor sit</p>
-                        <a href="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-6.jpg"
-                            title="Branding 2" data-gallery="portfolio-gallery-branding"
-                            class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                        <a href="./portfolio-details.html" title="More Details" class="details-link"><i
-                                class="bi bi-link-45deg"></i></a>
-                    </div>
-                </div><!-- End Portfolio Item -->
+                        <!-- Productos -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                            <img src="../public/img/pasta-infantil.jpg" class="img-fluid"
+                                alt="Pasta dental infantil sabor fresa">
+                            <div class="portfolio-info">
+                                <h4>Pasta Dental Infantil</h4>
+                                <p>Flúor controlado, sabor fresa.</p>
+                                <a href="../public/img/pasta-infantil.jpg" title="Pasta Dental Infantil"
+                                    data-gallery="portfolio-gallery-productos" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="../portfolio-details.html" title="Ficha del producto" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                    <img src="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-7.jpg"
-                        class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>App 3</h4>
-                        <p>Lorem ipsum, dolor sit</p>
-                        <a href="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-7.jpg"
-                            title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                class="bi bi-zoom-in"></i></a>
-                        <a href="./portfolio-details.html" title="More Details" class="details-link"><i
-                                class="bi bi-link-45deg"></i></a>
-                    </div>
-                </div><!-- End Portfolio Item -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                            <img src="../public/img/cepillo-sonico.jpg" class="img-fluid"
+                                alt="Cepillo eléctrico sónico">
+                            <div class="portfolio-info">
+                                <h4>Cepillo Sónico</h4>
+                                <p>5 modos de limpieza inteligente.</p>
+                                <a href="../public/img/cepillo-sonico.jpg" title="Cepillo Sónico"
+                                    data-gallery="portfolio-gallery-productos" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="../portfolio-details.html" title="Ficha del producto" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                    <img src="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-8.jpg"
-                        class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>Product 3</h4>
-                        <p>Lorem ipsum, dolor sit</p>
-                        <a href="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-8.jpg"
-                            title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                                class="bi bi-zoom-in"></i></a>
-                        <a href="./portfolio-details.html" title="More Details" class="details-link"><i
-                                class="bi bi-link-45deg"></i></a>
-                    </div>
-                </div><!-- End Portfolio Item -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                            <img src="../public/img/kit-blanqueamiento.jpg" class="img-fluid"
+                                alt="Kit de blanqueamiento domiciliario">
+                            <div class="portfolio-info">
+                                <h4>Kit Blanqueamiento</h4>
+                                <p>Carillas termoformadas + gel.</p>
+                                <a href="../public/img/kit-blanqueamiento.jpg" title="Kit Blanqueamiento"
+                                    data-gallery="portfolio-gallery-productos" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="../portfolio-details.html" title="Ficha del producto" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                    <img src="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-9.jpg"
-                        class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>Branding 3</h4>
-                        <p>Lorem ipsum, dolor sit</p>
-                        <a href="./public/vendor/template/assets/img/masonry-portfolio/masonry-portfolio-9.jpg"
-                            title="Branding 2" data-gallery="portfolio-gallery-branding"
-                            class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                        <a href="./portfolio-details.html" title="More Details" class="details-link"><i
-                                class="bi bi-link-45deg"></i></a>
-                    </div>
-                </div><!-- End Portfolio Item -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                            <img src="../public/img/enjuague-antiséptico.jpg" class="img-fluid"
+                                alt="Enjuague bucal sin alcohol">
+                            <div class="portfolio-info">
+                                <h4>Enjuague Antiséptico</h4>
+                                <p>Sin alcohol, uso diario.</p>
+                                <a href="../public/img/enjuague-antiséptico.jpg" title="Enjuague Antiséptico"
+                                    data-gallery="portfolio-gallery-productos" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="../portfolio-details.html" title="Ficha del producto" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
 
-            </div><!-- End Portfolio Container -->
+                        <!-- Casos clínicos -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="../public/img/restauración-estética.jpg" class="img-fluid"
+                                alt="Caso clínico restauración estética">
+                            <div class="portfolio-info">
+                                <h4>Restauración Estética</h4>
+                                <p>Coronas de porcelana en incisivos.</p>
+                                <a href="../public/img/restauración-estética.jpg" title="Restauración Antes"
+                                    data-gallery="portfolio-gallery-casos" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="../portfolio-details.html" title="Ver caso" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
 
-        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="../public/img/rehabilitación-implantes.jpg" class="img-fluid"
+                                alt="Rehabilitación completa con implantes">
+                            <div class="portfolio-info">
+                                <h4>Rehabilitación Implantes</h4>
+                                <p>Arcada superior fija sobre 4 implantes.</p>
+                                <a href="../public/img/rehabilitación-implantes.jpg" title="Rehabilitación Implantes"
+                                    data-gallery="portfolio-gallery-casos" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="../portfolio-details.html" title="Ver caso" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
 
-    </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="../public/img/ortodoncia-interceptiva.jpg" class="img-fluid"
+                                alt="Ortodoncia interceptiva en paciente pediátrico">
+                            <div class="portfolio-info">
+                                <h4>Caso Ortodoncia Interceptiva</h4>
+                                <p>Expansión rápida y control de hábitos.</p>
+                                <a href="../public/img/ortodoncia-interceptiva.jpg" title="Ortodoncia Interceptiva"
+                                    data-gallery="portfolio-gallery-casos" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="../portfolio-details.html" title="Ver caso" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
 
-</section><!-- /Portfolio Section -->
+                    </div><!-- End Portfolio Container -->
+                </div>
+            </div>
+        </section><!-- /Portfolio Section -->
+    </main>
+    <footer></footer>
+    
+    <script>
+        // Filtrado simple: muestra solo los .portfolio-item de la categoría seleccionada
+        (function () {
+            const labels = document.querySelectorAll('.portfolio-filters li label');
+            const container = document.querySelector('.isotope-container');
+            if (!container || labels.length === 0) return;
+            const items = Array.from(container.querySelectorAll('.portfolio-item'));
+
+            function applyFilter(filterId) {
+                if (filterId === 'filter-all') {
+                    items.forEach(i => i.style.display = '');
+                } else {
+                    items.forEach(i => {
+                        i.style.display = i.classList.contains(filterId) ? '' : 'none';
+                    });
+                }
+                // marcar filtro activo (usa la clase que ya tiene el template: .filter-active)
+                labels.forEach(lbl => lbl.parentElement.classList.remove('filter-active'));
+                const activeLabel = Array.from(labels).find(l => l.getAttribute('for') === filterId);
+                if (activeLabel) activeLabel.parentElement.classList.add('filter-active');
+            }
+
+            // Asignar eventos
+            labels.forEach(label => {
+                label.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const filterId = this.getAttribute('for');
+                    applyFilter(filterId);
+                });
+            });
+
+            // estado inicial: "Todos"
+            applyFilter('filter-all');
+        })();
+    </script>
+    <script src="../public/vendor/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
