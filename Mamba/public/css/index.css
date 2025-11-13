@@ -20,6 +20,18 @@
     font-size:medium;
 }
 
+.fuente-texto3{
+  text-align: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  color: rgb(9, 0, 0);
+  font-size: 15px;
+  text-shadow:
+    -1px -1px 0 #ffffff,
+     1px -1px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+     1px  1px 0 #ffffff;
+}
+
 .hero {
   position: relative;
   height: 100vh; 
@@ -32,6 +44,7 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
+  
 }
 
 .masthead::before {
