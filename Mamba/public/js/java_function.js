@@ -25,20 +25,8 @@
       });
   }
 
-<<<<<<< HEAD
-    fetch(url)
-        .then(response => response.text())
-        .then(html => {
-            document.querySelector('main').innerHTML = html;
-        })
-        .catch(error => {
-            console.error('Error loading page:', error);
-        });
-        
-=======
   // Exponer la función globalmente para que los enlaces con onclick sigan funcionando
   window.loadPage = loadPage;
->>>>>>> origin/main
 
   // Delegación de eventos y carga inicial cuando el DOM esté listo
   document.addEventListener('DOMContentLoaded', function () {
