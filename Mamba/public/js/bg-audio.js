@@ -37,7 +37,9 @@
         // Si falla (sin interacción), dejamos muted y reproducimos cuando haya interacción
         console.warn('No se pudo reproducir con sonido:', err);
         audio.muted = true;
-        audio.play().catch(()=>{});
+        audio.play().catch(err => {
+          console.warn('No se pudo reproducir ni siquiera muteado:', err);
+        });
       });
     } else {
       audio.pause();
@@ -57,7 +59,9 @@
   // También escucha la primera interacción global para intentar desmutear si la preferencia es playing
   function onFirstInteraction() {
     const pref = localStorage.getItem(storageKey);
-    if (pref === 'playing') {
+      audio.play().catch(err => {
+        console.warn('No se pudo reproducir con sonido tras la interacción:', err);
+      });
       audio.muted = false;
       audio.play().catch(()=>{});
       btn.textContent = '🔊 Detener música';
