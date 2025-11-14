@@ -13,45 +13,127 @@
 <body>
     <header></header>
     <main>
-        <!-- Stats Section -->
-        <section id="stats" class="stats section light-background">
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Reseñas de pacientes</h2>
+            <p>Familias que ya confían en Fábula Dental comparten cómo fue su experiencia.</p>
+        </div><!-- End Section Title -->
+
+        <!-- Testimonials Section -->
+        <section id="patient-reviews" class="section light-background">
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div class="row gy-4">
-                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-                        <i class="bi bi-emoji-smile"></i>
-                        <div class="stats-item">
-                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Happy Clients</p>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="usuarios flex-shrink-0 me-3">
+                                        <img src="./public/img/personas/maria.jpg" alt="Foto de Mariana" loading="lazy">
+                                    </div>
+                                    <div>
+                                        <h5 class="card-title mb-0">Mariana P.</h5>
+                                        <small class="text-muted">Mamá de Lucía (5 años)</small>
+                                    </div>
+                                </div>
+                                <div class="review-meta d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                                    <span class="badge review-badge">Limpieza preventiva</span>
+                                    <small class="text-muted">Visita: marzo 2025</small>
+                                </div>
+                                <blockquote class="review-quote">“Entramos temerosas y salimos sonriendo.”</blockquote>
+                                <p class="card-text">Mi hija llegó nerviosa pero el equipo la hizo sentir en confianza desde la sala de espera. La limpieza fue rápida, sin lágrimas y nos enviaron una guía para continuar en casa.</p>
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                    <div class="review-rating d-flex align-items-center gap-2">
+                                        <strong>5.0 / 5</strong>
+                                        <ul class="list-inline mb-0 text-warning">
+                                            <li class="list-inline-item"><i class="bi bi-star-fill"></i></li>
+                                            <li class="list-inline-item"><i class="bi bi-star-fill"></i></li>
+                                            <li class="list-inline-item"><i class="bi bi-star-fill"></i></li>
+                                            <li class="list-inline-item"><i class="bi bi-star-fill"></i></li>
+                                            <li class="list-inline-item"><i class="bi bi-star-fill"></i></li>
+                                        </ul>
+                                    </div>
+                                    <small class="text-muted">Duración de la cita: 35 min</small>
+                                </div>
+                            </div>
                         </div>
-                    </div><!-- End Stats Item -->
-                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-                        <i class="bi bi-journal-richtext"></i>
-                        <div class="stats-item">
-                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Projects</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="usuarios flex-shrink-0 me-3">
+                                        <img src="./public/img/personas/asto.jpg" alt="Familia Reyes" loading="lazy">
+                                    </div>
+                                    <div>
+                                        <h5 class="card-title mb-0">Familia Reyes</h5>
+                                        <small class="text-muted">Ortodoncia preventiva</small>
+                                    </div>
+                                </div>
+                                <div class="review-meta d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                                    <span class="badge review-badge">Ortodoncia interceptiva</span>
+                                    <small class="text-muted">Visita: enero 2025</small>
+                                </div>
+                                <blockquote class="review-quote">“Plan claro desde la primera visita.”</blockquote>
+                                <p class="card-text">Nos mostraron paso a paso cómo iría corrigiéndose la mordida de nuestro hijo y cada control incluye tips y ejercicios sencillos para casa. Sentimos que el seguimiento es constante.</p>
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                    <div class="review-rating d-flex align-items-center gap-2">
+                                        <strong>4.5 / 5</strong>
+                                        <ul class="list-inline mb-0 text-warning">
+                                            <li class="list-inline-item"><i class="bi bi-star-fill"></i></li>
+                                            <li class="list-inline-item"><i class="bi bi-star-fill"></i></li>
+                                            <li class="list-inline-item"><i class="bi bi-star-fill"></i></li>
+                                            <li class="list-inline-item"><i class="bi bi-star-fill"></i></li>
+                                            <li class="list-inline-item"><i class="bi bi-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <small class="text-muted">Control trimestral</small>
+                                </div>
+                            </div>
                         </div>
-                    </div><!-- End Stats Item -->
-                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-                        <i class="bi bi-headset"></i>
-                        <div class="stats-item">
-                            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Hours Of Support</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="usuarios flex-shrink-0 me-3">
+                                        <img src="./public/img/personas/tyler.jpg" alt="Foto de Carlos" loading="lazy">
+                                    </div>
+                                    <div>
+                                        <h5 class="card-title mb-0">Carlos A.</h5>
+                                        <small class="text-muted">Papá de mellizos</small>
+                                    </div>
+                                </div>
+                                <div class="review-meta d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                                    <span class="badge review-badge">Control integral</span>
+                                    <small class="text-muted">Visita: febrero 2025</small>
+                                </div>
+                                <blockquote class="review-quote">“Ahora ambos niños piden volver a control.”</blockquote>
+                                <p class="card-text">El espacio es lúdico y el personal explica todo con paciencia. Salieron orgullosos de sus nuevos cepillos y con un calendario magnético para recordar el horario de higiene.</p>
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                    <div class="review-rating d-flex align-items-center gap-2">
+                                        <strong>4.8 / 5</strong>
+                                        <ul class="list-inline mb-0 text-warning">
+                                            <li class="list-inline-item"><i class="bi bi-star-fill"></i></li>
+                                            <li class="list-inline-item"><i class="bi bi-star-fill"></i></li>
+                                            <li class="list-inline-item"><i class="bi bi-star-fill"></i></li>
+                                            <li class="list-inline-item"><i class="bi bi-star-fill"></i></li>
+                                            <li class="list-inline-item"><i class="bi bi-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <small class="text-muted">Seguimiento mensual</small>
+                                </div>
+                            </div>
                         </div>
-                    </div><!-- End Stats Item -->
-                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-                        <i class="bi bi-people"></i>
-                        <div class="stats-item">
-                            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Hard Workers</p>
-                        </div>
-                    </div><!-- End Stats Item -->
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <p class="text-muted mb-3">¿Quieres compartir tu experiencia o agendar la primera visita?</p>
+                    <a class="btn btn-primary review-cta" href="./view/contact.html" onclick="if(window.loadPage){loadPage(event, './view/contact.html');}">Comparte tu experiencia</a>
                 </div>
             </div>
-        </section><!-- /Stats Section -->
+        </section>
     </main>
     <footer>
     </footer>
