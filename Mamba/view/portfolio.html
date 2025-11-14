@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/vendor/template/assets/css/main.css">
     <link rel="stylesheet" href="../public/vendor/bootstrap-5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/index.css">
     <title>Portafolio</title>
 </head>
 
@@ -22,6 +23,112 @@
 
             <div class="container">
 
+                <div class="portfolio-tools row g-4 align-items-stretch mb-5" data-aos="fade-up" data-aos-delay="50">
+                    <div class="col-lg-5 col-xl-4">
+                        <div class="card shadow-sm border-0 h-100 filter-panel">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div>
+                                        <p class="text-uppercase text-muted small mb-1">Filtrar por interés</p>
+                                        <h5 class="mb-0">Herramientas de búsqueda</h5>
+                                    </div>
+                                    <i class="bi bi-sliders text-primary fs-4"></i>
+                                </div>
+                                <form id="portfolio-filter-form" class="filter-form">
+                                    <div class="filter-group mb-4">
+                                        <p class="fw-semibold mb-2">Tipo de servicio</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="preventivo" id="filterServicio1" name="service">
+                                            <label class="form-check-label" for="filterServicio1">Preventivos y limpiezas</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="ortodoncia" id="filterServicio2" name="service">
+                                            <label class="form-check-label" for="filterServicio2">Ortodoncia y crecimiento</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="estetica" id="filterServicio3" name="service">
+                                            <label class="form-check-label" for="filterServicio3">Estética / rehabilitación</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="productos" id="filterServicio4" name="service">
+                                            <label class="form-check-label" for="filterServicio4">Productos para casa</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter-group mb-4">
+                                        <p class="fw-semibold mb-2">Edad objetivo</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="infantil" id="filterEdad1" name="age">
+                                            <label class="form-check-label" for="filterEdad1">Niñas y niños</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="adolescente" id="filterEdad2" name="age">
+                                            <label class="form-check-label" for="filterEdad2">Adolescentes</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="adulto" id="filterEdad3" name="age">
+                                            <label class="form-check-label" for="filterEdad3">Familias y adultos</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter-group mb-4">
+                                        <p class="fw-semibold mb-2">Duración aproximada</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="corta" id="filterDuracion1" name="duration">
+                                            <label class="form-check-label" for="filterDuracion1">Sesiones cortas (&lt; 45 min)</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="media" id="filterDuracion2" name="duration">
+                                        <label class="form-check-label" for="filterDuracion2">Tratamientos medios (45-90 min)</label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" value="larga" id="filterDuracion3" name="duration">
+                                        <label class="form-check-label" for="filterDuracion3">Planes largos (&gt; 3 citas)</label>
+                                    </div>
+
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <button type="button" class="btn btn-primary" id="apply-filters">Aplicar filtros</button>
+                                        <button type="button" class="btn btn-outline-secondary" id="reset-filters">Limpiar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-xl-8">
+                        <div class="card shadow-sm border-0 h-100 availability-panel" id="portfolio-availability">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div>
+                                        <p class="text-uppercase text-muted small mb-1">Agenda rápida</p>
+                                        <h5 class="mb-0">Próximas fechas libres</h5>
+                                    </div>
+                                    <i class="bi bi-calendar-week text-success fs-4"></i>
+                                </div>
+                                <ul class="list-unstyled availability-slots flex-grow-1">
+                                    <li>
+                                        <strong>15 marzo · 10h00</strong>
+                                        <span>Limpieza preventiva + sellantes</span>
+                                    </li>
+                                    <li>
+                                        <strong>18 marzo · 16h30</strong>
+                                        <span>Ortodoncia interceptiva (control)</span>
+                                    </li>
+                                    <li>
+                                        <strong>21 marzo · 09h00</strong>
+                                        <span>Revisión integral hermanos</span>
+                                    </li>
+                                </ul>
+                                <a class="btn btn-outline-success whatsapp-link" href="https://wa.me/593963976516?text=Hola%20F%C3%A1bula%20Dental%2C%20quiero%20reservar%20una%20cita%20para%20mi%20familia" target="_blank" rel="noopener">Reserva por WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="portfolio-empty-state" class="alert alert-info d-none" role="status">
+                    No encontramos coincidencias para los filtros seleccionados. Ajusta las opciones o restablece la búsqueda.
+                </div>
+
                 <!-- Tratamientos -->
                 <div class="portfolio-category" id="portfolio-tratamientos" data-aos="fade-up" data-aos-delay="100">
                     <div class="category-header text-center text-md-start mb-4">
@@ -29,7 +136,7 @@
                         <p>Procedimientos clínicos pensados para devolver salud y confianza a cada sonrisa infantil.</p>
                     </div>
                     <div class="row gy-4">
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="col-lg-4 col-md-6 portfolio-item" data-services="preventivo" data-age="infantil" data-duration="corta">
                             <img src="./public/img/limpieza-ultrasonidos.jpg"
                                 class="img-fluid" alt="Limpieza dental profesional">
                             <div class="portfolio-info">
@@ -38,12 +145,15 @@
                                 <a href="./public/img/limpieza-ultrasonidos.jpg"
                                     title="Limpieza Profesional" data-gallery="portfolio-gallery-tratamientos"
                                     class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                <a href="#" title="Más detalles" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <button class="btn btn-outline-primary btn-sm mt-2 case-modal-trigger" type="button"
+                                    data-modal-title="Limpieza profesional con refuerzo de flúor" data-modal-goal="Eliminar placa, manchas y reforzar el esmalte en una sola cita" data-modal-plan="Valoración inicial, profilaxis con ultrasonido, barniz de flúor y guía de hábitos" data-modal-results="Sensación de limpieza inmediata y seguimiento de 7 días" data-modal-pdf="../public/docs/guia-cuidado-post-limpieza.pdf" data-modal-download-label="Guía de cuidados en casa">
+                                    Ver caso completo
+                                </button>
+                                <a class="d-block small mt-1" href="../public/docs/guia-cuidado-post-limpieza.pdf" download>Descargar guía PDF</a>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="col-lg-4 col-md-6 portfolio-item" data-services="ortodoncia" data-age="adolescente" data-duration="larga">
                             <img src="./public/img/ortodoncia-estética.jpg"
                                 class="img-fluid" alt="Ortodoncia estética con brackets de zafiro">
                             <div class="portfolio-info">
@@ -52,12 +162,14 @@
                                 <a href="./public/img/ortodoncia-estética.jpg"
                                     title="Ortodoncia Estética" data-gallery="portfolio-gallery-tratamientos"
                                     class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Más detalles" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <button class="btn btn-outline-primary btn-sm mt-2 case-modal-trigger" type="button"
+                                    data-modal-title="Ortodoncia estética con plan digital" data-modal-goal="Alinear la sonrisa sin sacrificar estética" data-modal-plan="Escaneo intraoral, simulación 3D y controles bimestrales" data-modal-results="Brackets de zafiro con resultados proyectados en 12 meses" data-modal-pdf="./public/docs/plan-ortodoncia-digital.pdf" data-modal-download-label="Plan digital de tratamiento">
+                                    Ver caso completo
+                                </button>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="col-lg-4 col-md-6 portfolio-item" data-services="estetica" data-age="adulto" data-duration="media">
                             <img src="./public/img/blanqueamiento-LED.jpg"
                                 class="img-fluid" alt="Blanqueamiento dental con lámpara LED">
                             <div class="portfolio-info">
@@ -66,12 +178,14 @@
                                 <a href="./public/img/blanqueamiento-LED.jpg"
                                     title="Blanqueamiento LED" data-gallery="portfolio-gallery-tratamientos"
                                     class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Más detalles" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <button class="btn btn-outline-primary btn-sm mt-2 case-modal-trigger" type="button"
+                                    data-modal-title="Blanqueamiento clínico LED" data-modal-goal="Aclarar hasta dos tonos en una sesión cómoda" data-modal-plan="Protección gingival, tres ciclos de luz fría y kit domiciliario" data-modal-results="Cambio visible inmediato y control fotográfico" data-modal-pdf="./public/docs/plan-estetica-led.pdf" data-modal-download-label="Checklist previo">
+                                    Ver caso completo
+                                </button>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="col-lg-4 col-md-6 portfolio-item" data-services="preventivo" data-age="infantil" data-duration="corta">
                             <img src="./public/img/sellantes-pediátricos.jpg" class="img-fluid"
                                 alt="Sellantes dentales pediátricos">
                             <div class="portfolio-info">
@@ -80,32 +194,38 @@
                                 <a href="./public/img/sellantes-pediátricos.jpg" title="Sellantes Pediátricos"
                                     data-gallery="portfolio-gallery-tratamientos" class="glightbox preview-link"><i
                                         class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Más detalles" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <button class="btn btn-outline-primary btn-sm mt-2 case-modal-trigger" type="button"
+                                    data-modal-title="Sellantes pediátricos en molares" data-modal-goal="Evitar caries tempranas en molares definitivos" data-modal-plan="Aislamiento absoluto, grabado y resina fluida" data-modal-results="Superficies protegidas por 2 años" data-modal-pdf="./public/docs/guia-cuidado-post-limpieza.pdf">
+                                    Ver caso completo
+                                </button>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="col-lg-4 col-md-6 portfolio-item" data-services="estetica" data-age="adulto" data-duration="media">
                             <img src="./public/img/endodoncia.jpg" class="img-fluid" alt="Tratamiento de endodoncia">
                             <div class="portfolio-info">
                                 <h4>Endodoncia</h4>
                                 <p>Tratamiento de conducto con técnicas actuales.</p>
                                 <a href="./public/img/endodoncia.jpg" title="Endodoncia" data-gallery="portfolio-gallery-tratamientos"
                                     class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Más detalles" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <button class="btn btn-outline-primary btn-sm mt-2 case-modal-trigger" type="button"
+                                    data-modal-title="Endodoncia guiada por microscopio" data-modal-goal="Conservar piezas con infección avanzada" data-modal-plan="Diagnóstico 3D, aislamiento absoluto y obturación termoplástica" data-modal-results="Recuperación sin dolor y corona definitiva en 10 días" data-modal-pdf="./public/docs/plan-endodoncia.pdf">
+                                    Ver caso completo
+                                </button>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="col-lg-4 col-md-6 portfolio-item" data-services="ortodoncia" data-age="adolescente,adulto" data-duration="larga">
                             <img src="./public/img/ortodoncia-invisible.jpg" class="img-fluid" alt="Ortodoncia invisible">
                             <div class="portfolio-info">
                                 <h4>Ortodoncia Invisible</h4>
                                 <p>Alineadores transparentes para adultos y adolescentes.</p>
                                 <a href="./public/img/ortodoncia-invisible.jpg" title="Ortodoncia Invisible" data-gallery="portfolio-gallery-tratamientos"
                                     class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Más detalles" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <button class="btn btn-outline-primary btn-sm mt-2 case-modal-trigger" type="button"
+                                    data-modal-title="Ortodoncia invisible por etapas" data-modal-goal="Corregir apiñamiento leve-moderado sin brackets" data-modal-plan="Set de alineadores, revisiones cada 6 semanas y app de seguimiento" data-modal-results="Resultados estimados en 8-14 meses" data-modal-pdf="./public/docs/plan-ortodoncia-digital.pdf">
+                                    Ver caso completo
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -118,7 +238,7 @@
                         <p>Insumos odontológicos y kits para continuar el cuidado en casa.</p>
                     </div>
                     <div class="row gy-4">
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="col-lg-4 col-md-6 portfolio-item" data-services="productos" data-age="infantil" data-duration="corta">
                             <img src="./public/img/pasta-infantil.jpg" class="img-fluid"
                                 alt="Pasta dental infantil sabor fresa">
                             <div class="portfolio-info">
@@ -127,12 +247,11 @@
                                 <a href="./public/img/pasta-infantil.jpg" title="Pasta Dental Infantil"
                                     data-gallery="portfolio-gallery-productos" class="glightbox preview-link"><i
                                         class="bi bi-zoom-in"></i></a>
-                                <a href="#" title="Ficha del producto" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <a href="../public/docs/catalogo-productos.pdf" class="details-link" download title="Ficha técnica"><i class="bi bi-file-earmark-arrow-down"></i></a>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                            <div class="col-lg-4 col-md-6 portfolio-item" data-services="productos" data-age="infantil,adolescente" data-duration="corta">
                             <img src="./public/img/cepillo-sonico.jpg" class="img-fluid"
                                 alt="Cepillo eléctrico sónico">
                             <div class="portfolio-info">
@@ -141,12 +260,11 @@
                                 <a href="./public/img/cepillo-sonico.jpg" title="Cepillo Sónico"
                                     data-gallery="portfolio-gallery-productos" class="glightbox preview-link"><i
                                         class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Ficha del producto" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <a href="../public/docs/catalogo-productos.pdf" class="details-link" download title="Ficha técnica"><i class="bi bi-file-earmark-arrow-down"></i></a>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                            <div class="col-lg-4 col-md-6 portfolio-item" data-services="productos" data-age="adulto" data-duration="media">
                             <img src="./public/img/kit-blanqueamiento.jpg" class="img-fluid"
                                 alt="Kit de blanqueamiento domiciliario">
                             <div class="portfolio-info">
@@ -155,12 +273,11 @@
                                 <a href="./public/img/kit-blanqueamiento.jpg" title="Kit Blanqueamiento"
                                     data-gallery="portfolio-gallery-productos" class="glightbox preview-link"><i
                                         class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Ficha del producto" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <a href="../public/docs/catalogo-productos.pdf" class="details-link" download title="Ficha técnica"><i class="bi bi-file-earmark-arrow-down"></i></a>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                            <div class="col-lg-4 col-md-6 portfolio-item" data-services="productos" data-age="adulto" data-duration="corta">
                             <img src="./public/img/enjuague-antiséptico.jpg" class="img-fluid"
                                 alt="Enjuague bucal sin alcohol">
                             <div class="portfolio-info">
@@ -169,32 +286,29 @@
                                 <a href="./public/img/enjuague-antiséptico.jpg" title="Enjuague Antiséptico"
                                     data-gallery="portfolio-gallery-productos" class="glightbox preview-link"><i
                                         class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Ficha del producto" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <a href="../public/docs/catalogo-productos.pdf" class="details-link" download title="Ficha técnica"><i class="bi bi-file-earmark-arrow-down"></i></a>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                            <div class="col-lg-4 col-md-6 portfolio-item" data-services="productos" data-age="infantil,adolescente" data-duration="corta">
                             <img src="./public/img/hilo-dental.jpg" class="img-fluid" alt="Hilo dental suave">
                             <div class="portfolio-info">
                                 <h4>Hilo Dental Premium</h4>
                                 <p>Hilo encerado para limpieza interdental eficaz.</p>
                                 <a href="./public/img/hilo-dental.jpg" title="Hilo Dental" data-gallery="portfolio-gallery-productos"
                                     class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Ficha del producto" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <a href="../public/docs/catalogo-productos.pdf" class="details-link" download title="Ficha técnica"><i class="bi bi-file-earmark-arrow-down"></i></a>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                            <div class="col-lg-4 col-md-6 portfolio-item" data-services="productos" data-age="adulto" data-duration="media">
                             <img src="./public/img/gel-fluor.jpg" class="img-fluid" alt="Gel con flúor para fortalecimiento">
                             <div class="portfolio-info">
                                 <h4>Gel Fluorado</h4>
                                 <p>Aplicación profesional para fortalecimiento del esmalte.</p>
                                 <a href="./public/img/gel-fluor.jpg" title="Gel Fluorado" data-gallery="portfolio-gallery-productos"
                                     class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Ficha del producto" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <a href="../public/docs/catalogo-productos.pdf" class="details-link" download title="Ficha técnica"><i class="bi bi-file-earmark-arrow-down"></i></a>
                             </div>
                         </div>
                     </div>
@@ -207,7 +321,7 @@
                         <p>Historias reales que muestran la evolución y resultados logrados en nuestra consulta.</p>
                     </div>
                     <div class="row gy-4">
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="col-lg-4 col-md-6 portfolio-item" data-services="estetica" data-age="adulto" data-duration="media">
                             <img src="./public/img/restauración-estética.jpg" class="img-fluid"
                                 alt="Caso clínico restauración estética">
                             <div class="portfolio-info">
@@ -216,12 +330,14 @@
                                 <a href="./public/img/restauración-estética.jpg" title="Restauración Antes"
                                     data-gallery="portfolio-gallery-casos" class="glightbox preview-link"><i
                                         class="bi bi-zoom-in"></i></a>
-                                <a href="#" title="Ver caso" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <button class="btn btn-outline-primary btn-sm mt-2 case-modal-trigger" type="button"
+                                    data-modal-title="Restauración estética con carillas" data-modal-goal="Devolver armonía a la sonrisa" data-modal-plan="Carillas de porcelana y microdiseño digital" data-modal-results="Transformación visible en 3 citas" data-modal-pdf="../public/docs/casos-clinicos.pdf">
+                                    Ver caso completo
+                                </button>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="col-lg-4 col-md-6 portfolio-item" data-services="estetica" data-age="adulto" data-duration="larga">
                             <img src="./public/img/rehabilitación-implantes.jpg" class="img-fluid"
                                 alt="Rehabilitación completa con implantes">
                             <div class="portfolio-info">
@@ -230,12 +346,14 @@
                                 <a href="./public/img/rehabilitación-implantes.jpg" title="Rehabilitación Implantes"
                                     data-gallery="portfolio-gallery-casos" class="glightbox preview-link"><i
                                         class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Ver caso" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <button class="btn btn-outline-primary btn-sm mt-2 case-modal-trigger" type="button"
+                                    data-modal-title="Rehabilitación total sobre implantes" data-modal-goal="Recuperar función completa con cuatro implantes" data-modal-plan="Cirugía guiada, prótesis provisional y definitiva" data-modal-results="30 dientes fijos en 90 días" data-modal-pdf="../public/docs/casos-clinicos.pdf">
+                                    Ver caso completo
+                                </button>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="col-lg-4 col-md-6 portfolio-item" data-services="ortodoncia" data-age="infantil,adolescente" data-duration="larga">
                             <img src="./public/img/ortodoncia-interceptiva.jpg" class="img-fluid"
                                 alt="Ortodoncia interceptiva en paciente pediátrico">
                             <div class="portfolio-info">
@@ -244,32 +362,95 @@
                                 <a href="./public/img/ortodoncia-interceptiva.jpg" title="Ortodoncia Interceptiva"
                                     data-gallery="portfolio-gallery-casos" class="glightbox preview-link"><i
                                         class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Ver caso" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <button class="btn btn-outline-primary btn-sm mt-2 case-modal-trigger" type="button"
+                                    data-modal-title="Ortodoncia interceptiva" data-modal-goal="Dirigir el crecimiento y eliminar hábitos" data-modal-plan="Expansor rápido y plan de ejercicios" data-modal-results="Mordida equilibrada en 8 meses" data-modal-pdf="../public/docs/casos-clinicos.pdf">
+                                    Ver caso completo
+                                </button>
                             </div>
                         </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                        
+                        <div class="col-lg-4 col-md-6 portfolio-item" data-services="estetica" data-age="adulto" data-duration="media">
                             <img src="./public/img/periodoncia-caso.jpg" class="img-fluid" alt="Caso periodoncia">
                             <div class="portfolio-info">
                                 <h4>Tratamiento Periodontal</h4>
                                 <p>Regeneración y control de enfermedad periodontal.</p>
                                 <a href="./public/img/periodoncia-caso.jpg" title="Periodoncia" data-gallery="portfolio-gallery-casos"
                                     class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Ver caso" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <button class="btn btn-outline-primary btn-sm mt-2 case-modal-trigger" type="button"
+                                    data-modal-title="Periodoncia regenerativa" data-modal-goal="Detener la pérdida ósea" data-modal-plan="Láser terapéutico, injertos y mantenimiento" data-modal-results="Retracción estabilizada en 6 meses" data-modal-pdf="./public/docs/casos-clinicos.pdf">
+                                    Ver caso completo
+                                </button>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="col-lg-4 col-md-6 portfolio-item" data-services="estetica" data-age="adulto" data-duration="media">
                             <img src="./public/img/rehabilitacion-estetica-caso.jpg" class="img-fluid" alt="Rehabilitación estética completa">
                             <div class="portfolio-info">
                                 <h4>Rehabilitación Estética Completa</h4>
                                 <p>Plan de restauración integral con carillas y coronas.</p>
                                 <a href="./public/img/rehabilitacion-estetica-caso.jpg" title="Rehabilitación Estética" data-gallery="portfolio-gallery-casos"
                                     class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Ver caso" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                                <button class="btn btn-outline-primary btn-sm mt-2 case-modal-trigger" type="button"
+                                    data-modal-title="Rehabilitación estética completa" data-modal-goal="Integrar carillas y coronas para armonizar" data-modal-plan="Planeación digital de la sonrisa, mock-up y cementado definitivo" data-modal-results="Cambio total en 4 semanas" data-modal-pdf="./public/docs/casos-clinicos.pdf">
+                                    Ver caso completo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-category mt-5 pt-5 border-top" id="portfolio-paquetes" data-aos="fade-up" data-aos-delay="250">
+                    <div class="category-header text-center text-md-start mb-4">
+                        <h3>Paquetes que combinan servicios</h3>
+                        <p>Arma un plan integral con precio cerrado y seguimiento digital.</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm package-card">
+                                <div class="card-body">
+                                    <span class="badge bg-info-subtle text-info mb-2">Popular</span>
+                                    <h4 class="card-title">Plan Sonrisa Segura</h4>
+                                    <p class="text-muted">Limpieza + sellantes + guía personalizada</p>
+                                    <ul class="list-unstyled small mb-4">
+                                        <li><i class="bi bi-check-circle text-success me-1"></i>2 citas preventivas</li>
+                                        <li><i class="bi bi-check-circle text-success me-1"></i>Kit de higiene para casa</li>
+                                        <li><i class="bi bi-check-circle text-success me-1"></i>Recordatorios automáticos</li>
+                                    </ul>
+                                    <p class="fw-bold">$120 / niño</p>
+                                    <button class="btn btn-primary w-100" onclick="if(window.loadPage){loadPage(event,'./view/contact.html');} else {window.location.href='./view/contact.html';}">Solicitar paquete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm package-card">
+                                <div class="card-body">
+                                    <span class="badge bg-warning-subtle text-warning mb-2">Familiar</span>
+                                    <h4 class="card-title">Control Hermanos</h4>
+                                    <p class="text-muted">Dos revisiones simultáneas + coaching de hábitos</p>
+                                    <ul class="list-unstyled small mb-4">
+                                        <li><i class="bi bi-check-circle text-success me-1"></i>Agenda unificada</li>
+                                        <li><i class="bi bi-check-circle text-success me-1"></i>Informe digital para padres</li>
+                                        <li><i class="bi bi-check-circle text-success me-1"></i>Atención preferente</li>
+                                    </ul>
+                                    <p class="fw-bold">$180 / familia</p>
+                                    <a class="btn btn-outline-primary w-100" href="https://wa.me/593963976516?text=Quiero%20el%20paquete%20Control%20Hermanos" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm package-card">
+                                <div class="card-body">
+                                    <span class="badge bg-success-subtle text-success mb-2">Integral</span>
+                                    <h4 class="card-title">Transformación Estética</h4>
+                                    <p class="text-muted">Blanqueamiento + mock-up + carillas</p>
+                                    <ul class="list-unstyled small mb-4">
+                                        <li><i class="bi bi-check-circle text-success me-1"></i>Planeación digital</li>
+                                        <li><i class="bi bi-check-circle text-success me-1"></i>3 sesiones clínicas</li>
+                                        <li><i class="bi bi-check-circle text-success me-1"></i>Garantía de ajuste</li>
+                                    </ul>
+                                    <p class="fw-bold">Desde $690</p>
+                                    <button class="btn btn-outline-success w-100" onclick="if(window.loadPage){loadPage(event,'./view/contact.html');} else {window.location.href='./view/contact.html';}">Agenda valoración</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -280,7 +461,162 @@
     </main>
     <footer></footer>
 
+    <div class="modal fade" id="portfolioCaseModal" tabindex="-1" aria-labelledby="portfolioCaseModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="portfolioCaseModalLabel">Detalle de caso</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-goal fw-semibold"></p>
+                    <dl class="row modal-details"></dl>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-outline-primary modal-download" href="#" target="_blank" rel="noopener">Descargar guía PDF</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="../public/vendor/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function () {
+            const ready = (cb) => {
+                if (document.readyState !== 'loading') {
+                    cb();
+                } else {
+                    document.addEventListener('DOMContentLoaded', cb, { once: true });
+                }
+            };
+
+            const initFilters = () => {
+                const form = document.getElementById('portfolio-filter-form');
+                if (!form) return;
+
+                const items = Array.from(document.querySelectorAll('.portfolio-item'));
+                const emptyState = document.getElementById('portfolio-empty-state');
+                const checkboxes = Array.from(form.querySelectorAll('input[type="checkbox"]'));
+                const resetBtn = document.getElementById('reset-filters');
+                const applyBtn = document.getElementById('apply-filters');
+
+                const getSelections = () => {
+                    return checkboxes.reduce((acc, checkbox) => {
+                        if (checkbox.checked) {
+                            acc[checkbox.name] = acc[checkbox.name] || [];
+                            acc[checkbox.name].push(checkbox.value);
+                        }
+                        return acc;
+                    }, {});
+                };
+
+                const matches = (item, selections) => {
+                    const parseList = (value) => (value || '').split(',').map((val) => val.trim()).filter(Boolean);
+                    const services = parseList(item.dataset.services);
+                    const ages = parseList(item.dataset.age);
+                    const durations = parseList(item.dataset.duration);
+
+                    const serviceOk = !selections.service || selections.service.length === 0 || services.some((s) => selections.service.includes(s));
+                    const ageOk = !selections.age || selections.age.length === 0 || ages.some((s) => selections.age.includes(s));
+                    const durationOk = !selections.duration || selections.duration.length === 0 || durations.some((s) => selections.duration.includes(s));
+                    return serviceOk && ageOk && durationOk;
+                };
+
+                const applyFilters = () => {
+                    const selections = getSelections();
+                    let visibleCount = 0;
+
+                    items.forEach((item) => {
+                        const shouldShow = matches(item, selections);
+                        item.classList.toggle('d-none', !shouldShow);
+                        if (shouldShow) visibleCount += 1;
+                    });
+
+                    if (emptyState) {
+                        emptyState.classList.toggle('d-none', visibleCount !== 0);
+                    }
+                };
+
+                checkboxes.forEach((checkbox) => checkbox.addEventListener('change', applyFilters));
+                if (applyBtn) applyBtn.addEventListener('click', applyFilters);
+                if (resetBtn) {
+                    resetBtn.addEventListener('click', () => {
+                        checkboxes.forEach((checkbox) => (checkbox.checked = false));
+                        applyFilters();
+                    });
+                }
+
+                applyFilters();
+            };
+
+            const initModal = () => {
+                const modalElement = document.getElementById('portfolioCaseModal');
+                if (!modalElement) return;
+                let modalInstance;
+                const goal = modalElement.querySelector('.modal-goal');
+                const details = modalElement.querySelector('.modal-details');
+                const downloadLink = modalElement.querySelector('.modal-download');
+
+                const cleanupBackdrop = () => {
+                    document.body.classList.remove('modal-open');
+                    document.body.style.removeProperty('padding-right');
+                    document.querySelectorAll('.modal-backdrop').forEach((backdrop) => backdrop.remove());
+                };
+
+                modalElement.addEventListener('hidden.bs.modal', cleanupBackdrop);
+
+                const updateModal = (trigger) => {
+                    goal.textContent = trigger.dataset.modalGoal || 'Caso clínico detallado';
+
+                    const sections = [
+                        { label: 'Plan de acción', value: trigger.dataset.modalPlan },
+                        { label: 'Resultados', value: trigger.dataset.modalResults }
+                    ].filter((section) => section.value);
+
+                    details.innerHTML = sections
+                        .map((section) => `
+                            <dt class="col-sm-4">${section.label}</dt>
+                            <dd class="col-sm-8">${section.value}</dd>
+                        `)
+                        .join('') || '<p class="text-muted mb-0">Consulta personalizada según diagnóstico.</p>';
+
+                    const downloadLabel = trigger.dataset.modalDownloadLabel || 'Descargar guía PDF';
+                    const pdf = trigger.dataset.modalPdf;
+                    if (pdf) {
+                        downloadLink.classList.remove('disabled');
+                        downloadLink.href = pdf;
+                        downloadLink.textContent = downloadLabel;
+                    } else {
+                        downloadLink.classList.add('disabled');
+                        downloadLink.href = '#';
+                        downloadLink.textContent = 'Recurso no disponible';
+                    }
+
+                    modalElement.querySelector('.modal-title').textContent = trigger.dataset.modalTitle || 'Detalle del servicio';
+
+                    if (!modalInstance && window.bootstrap) {
+                        modalInstance = new window.bootstrap.Modal(modalElement);
+                    }
+                    if (modalInstance) {
+                        modalInstance.show();
+                    }
+                };
+
+                document.querySelectorAll('.case-modal-trigger').forEach((button) => {
+                    button.addEventListener('click', () => updateModal(button));
+                });
+            };
+
+            const bootstrapInit = () => {
+                initFilters();
+                initModal();
+            };
+
+            ready(bootstrapInit);
+            document.addEventListener('view:loaded', bootstrapInit);
+        })();
+    </script>
 </body>
 
 </html>

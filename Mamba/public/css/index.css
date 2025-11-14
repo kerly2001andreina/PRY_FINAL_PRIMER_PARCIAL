@@ -153,6 +153,78 @@
   transform: translateY(-1px);
 }
 
+.portfolio-tools .card {
+  border-radius: 1rem;
+}
+
+.filter-form .form-check {
+  margin-bottom: 0.35rem;
+}
+
+.filter-form .form-check-input:checked {
+  background-color: #00bcd4;
+  border-color: #00bcd4;
+}
+
+.availability-panel {
+  background: linear-gradient(135deg, #f0fbff, #ffffff);
+}
+
+.availability-slots li {
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px dashed rgba(15, 23, 42, 0.1);
+}
+
+.availability-slots li:last-child {
+  border-bottom: none;
+}
+
+.availability-slots strong {
+  color: #0f172a;
+}
+
+.availability-slots span {
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.whatsapp-link {
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.portfolio-empty-state {
+  border-radius: 1rem;
+  font-weight: 500;
+}
+
+.package-card .badge {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.package-card ul li {
+  padding-left: 0.25rem;
+  margin-bottom: 0.4rem;
+}
+
+.package-card .btn {
+  border-radius: 999px;
+}
+
+.review-related .badge {
+  background-color: rgba(0, 188, 212, 0.15);
+  color: #007bff;
+  font-weight: 500;
+}
+
+.review-related a {
+  text-decoration: none;
+}
+
 /* Quitar viñetas y resetear padding/margen por defecto en listas */
 .list-unstyled {
   list-style: none !important;
