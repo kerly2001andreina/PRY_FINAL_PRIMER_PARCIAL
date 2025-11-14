@@ -1,79 +1,97 @@
 (function () {
-  const audio = document.getElementById('bg-audio');
-  const btn = document.getElementById('bg-audio-toggle');
-  const storageKey = 'fabuladental_bg_audio';
+  const STORAGE_KEY = 'fabuladental_bg_audio';
 
-  // Ajustes por defecto
-  audio.volume = 0.4; // volumen inicial (0.0 - 1.0)
-  audio.loop = true;
+  function safeQuery(id) { return document.getElementById(id); }
 
-  // Intentar autoplay silencioso (algunos navegadores permiten autoplay si está muteado)
-  audio.muted = true;
-  audio.play().catch(() => {
-    // Autoplay bloqueado: queda inactivo hasta interacción
-  });
+  function init() {
+    const audio = safeQuery('bg-audio');
+    if (!audio) return; // nada que hacer si no hay elemento
 
-  // Si el usuario ya guardó preferencia, aplicarla
-  const pref = localStorage.getItem(storageKey);
-  if (pref === 'playing') {
-    // intentar activar sonido una vez haya interacción (ver abajo)
-    // mostramos estado en el botón
-    btn.textContent = '🔊 Detener música';
-    btn.setAttribute('aria-pressed', 'true');
-  } else {
-    btn.textContent = '🔈 Reproducir música';
-    btn.setAttribute('aria-pressed', 'false');
-  }
+    // configuración segura por defecto
+    audio.volume = typeof audio.volume === 'number' ? audio.volume : 0.35;
+    audio.loop = true;
+    audio.preload = audio.preload || 'auto';
 
-  function setPlaying(shouldPlay) {
-    if (shouldPlay) {
-      // Desmutear y reproducir (requiere interacción del usuario en algunos navegadores)
-      audio.muted = false;
-      audio.play().then(() => {
-        btn.textContent = '🔊 Detener música';
-        btn.setAttribute('aria-pressed', 'true');
-        localStorage.setItem(storageKey, 'playing');
-      }).catch(err => {
-        // Si falla (sin interacción), dejamos muted y reproducimos cuando haya interacción
-        console.warn('No se pudo reproducir con sonido:', err);
-        audio.muted = true;
-        audio.play().catch(err => {
-          console.warn('No se pudo reproducir ni siquiera muteado:', err);
-        });
-      });
-    } else {
-      audio.pause();
-      audio.currentTime = 0;
-      btn.textContent = '🔈 Reproducir música';
+    // Intentar iniciar en silencio (algunos navegadores permiten autoplay si está muteado)
+    audio.muted = true;
+    audio.play().catch(() => {
+      // Autoplay bloqueado: quedará a la espera de interacción
+    });
+
+    // Preparar control (si no existe, crear uno y añadirlo al footer o al body)
+    let btn = safeQuery('bg-audio-toggle');
+    if (!btn) {
+      btn = document.createElement('button');
+      btn.id = 'bg-audio-toggle';
+      btn.type = 'button';
+      btn.className = 'bg-audio-toggle';
+      // accesibilidad
       btn.setAttribute('aria-pressed', 'false');
-      localStorage.setItem(storageKey, 'paused');
+      btn.setAttribute('aria-label', 'Control de reproducción de audio de fondo');
+      const place = document.getElementById('footer') || document.querySelector('footer') || document.body;
+      place.appendChild(btn);
     }
+
+    // Actualizar estado visual del botón
+    function updateButton(isPlaying) {
+      btn.textContent = isPlaying ? 'Detener música' : 'Reproducir música';
+      btn.setAttribute('aria-pressed', isPlaying ? 'true' : 'false');
+    }
+
+    // Aplicar preferencia guardada
+    const pref = localStorage.getItem(STORAGE_KEY);
+    updateButton(pref === 'playing');
+
+    // Toggle reproducir/pausar
+    btn.addEventListener('click', function () {
+      const isPlaying = btn.getAttribute('aria-pressed') === 'true';
+      if (isPlaying) {
+        audio.pause();
+        audio.currentTime = 0;
+        audio.muted = true;
+        localStorage.setItem(STORAGE_KEY, 'paused');
+        updateButton(false);
+      } else {
+        // Intentar reproducir con sonido (esto requiere interacción en muchos navegadores)
+        audio.muted = false;
+        audio.play().then(() => {
+          localStorage.setItem(STORAGE_KEY, 'playing');
+          updateButton(true);
+        }).catch(err => {
+          console.warn('Reproducción con sonido bloqueada:', err);
+          // fallback: reproducir en silencio
+          audio.muted = true;
+          audio.play().catch(() => {});
+          updateButton(false);
+        });
+      }
+    });
+
+    // Escuchar la primera interacción global para respetar políticas de autoplay
+    function onFirstInteraction() {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored === 'playing') {
+        audio.muted = false;
+        audio.play().then(() => {
+          updateButton(true);
+        }).catch(err => {
+          console.warn('No se pudo reproducir tras interacción:', err);
+        });
+      }
+      // remover listeners una vez se haya producido la primera interacción
+      document.removeEventListener('click', onFirstInteraction);
+      document.removeEventListener('keydown', onFirstInteraction);
+      document.removeEventListener('touchstart', onFirstInteraction);
+    }
+
+    document.addEventListener('click', onFirstInteraction, { once: true });
+    document.addEventListener('keydown', onFirstInteraction, { once: true });
+    document.addEventListener('touchstart', onFirstInteraction, { once: true });
   }
 
-  // Alternar al hacer click en el botón (esto cuenta como interacción)
-  btn.addEventListener('click', function () {
-    const isPlaying = btn.getAttribute('aria-pressed') === 'true';
-    setPlaying(!isPlaying);
-  });
-
-  // También escucha la primera interacción global para intentar desmutear si la preferencia es playing
-  function onFirstInteraction() {
-    const pref = localStorage.getItem(storageKey);
-      audio.play().catch(err => {
-        console.warn('No se pudo reproducir con sonido tras la interacción:', err);
-      });
-      audio.muted = false;
-      audio.play().catch(()=>{});
-      btn.textContent = '🔊 Detener música';
-      btn.setAttribute('aria-pressed', 'true');
-    }
-    // ya no necesitamos este listener
-    document.removeEventListener('click', onFirstInteraction);
-    document.removeEventListener('keydown', onFirstInteraction);
-    document.removeEventListener('touchstart', onFirstInteraction);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
-
-  document.addEventListener('click', onFirstInteraction);
-  document.addEventListener('keydown', onFirstInteraction);
-  document.addEventListener('touchstart', onFirstInteraction);
 })();
