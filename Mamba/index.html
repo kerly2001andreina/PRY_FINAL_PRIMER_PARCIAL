@@ -6,7 +6,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Fábula Dental</title>
   <meta name="description" content="Odontología pediátrica de calidad en un ambiente divertido y seguro.">
-  <meta name="keywords" content="odontología pediátrica, cuidado dental, ambiente divertido, atención dental segura, salud bucal infantil">
+  <meta name="keywords"
+    content="odontología pediátrica, cuidado dental, ambiente divertido, atención dental segura, salud bucal infantil">
 
   <!-- Favicons -->
   <link href="./public/img/cropped-LOGOTIPO-PERFIL-2-192x192.png" rel="icon">
@@ -67,29 +68,17 @@
             <li><a href="./view/home.html" onclick="loadPage(event, this.href)" class="active">Inicio</a></li>
             <li><a href="./view/about.html" onclick="loadPage(event, this.href)">Acerca de</a></li>
             <li><a href="./view/services.html" onclick="loadPage(event, this.href)">Servicios</a></li>
-            <li><a href="./view/portfolio.html" onclick="loadPage(event, this.href)">Portafolio</a></li>
+            <li><a href="./view/portfolio.html" onclick="loadPage(event, this.href)">Servicios Adicionales</a></li>
             <li><a href="./view/team.html" onclick="loadPage(event, this.href)">Equipo</a></li>
             <li class="dropdown"><a href="#"><span>PRIMERA VISITA</span> <i
                   class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="./view/why_us.html" onclick="loadPage(event, this.href)">POR QUÉ ELEGIRNOS</a></li>
                 <li><a href="./view/faq.html" onclick="loadPage(event, this.href)">PREGUNTAS FRECUENTES</a></li>
-                <li class="dropdown"><a href="#"><span>Desplegable Profundo</span> <i
-                      class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Desplegable Profundo 1</a></li>
-                    <li><a href="#">Desplegable Profundo 2</a></li>
-                    <li><a href="#">Desplegable Profundo 3</a></li>
-                    <li><a href="#">Desplegable Profundo 4</a></li>
-                    <li><a href="#">Desplegable Profundo 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Desplegable 2</a></li>
-                <li><a href="#">Desplegable 3</a></li>
-                <li><a href="#">Desplegable 4</a></li>
-              </ul>
             </li>
-            <li><a href="./view/contact.html" onclick="loadPage(event, this.href)">Contacto</a></li>
+          </ul>
+          </li>
+          <li><a href="./view/contact.html" onclick="loadPage(event, this.href)">Contacto</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -134,8 +123,8 @@
             <li><a href="./view/home.html" onclick="loadPage(event, this.href)">Inicio</a></li>
             <li><a href="./view/about.html" onclick="loadPage(event, this.href)">Acerca de nosotros</a></li>
             <li><a href="./view/services.html" onclick="loadPage(event, this.href)">Servicios</a></li>
-            <li><a href="#" onclick="loadPage(event, this.href)">Términos de servicio</a></li>
-            <li><a href="#" onclick="loadPage(event, this.href)">Política de privacidad</a></li>
+            <li><a href="#">Términos de servicio</a></li>
+            <li><a href="#">Política de privacidad</a></li>
           </ul>
         </div>
 
@@ -205,13 +194,13 @@
 
   <script src="./public/js/java_function.js"></script>
   <script>
-    
+
     window.addEventListener("DOMContentLoaded", () => {
-      
-      loadPage({ preventDefault: () => {} }, './view/home.html');
+
+      loadPage({ preventDefault: () => { } }, './view/home.html');
     });
   </script>
-
+  <script src="./public/js/bg-audio.js"></script>
 
 </body>
 
