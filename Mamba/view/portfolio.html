@@ -16,30 +16,20 @@
         <section id="portfolio" class="portfolio section">
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <h2>Portafolio</h2>
-                <p>Nuestra seccion de productos odontologicos,aca podemos encontrar una variedad de tratamientos y
-                    productos para el cuidado dental.</p>
+                <h2>Servicios Adicionales</h2>
+                <p>Nuestros servicios adicionales están diseñados para complementar y mejorar tu experiencia dental.</p>
             </div><!-- End Section Title -->
+
             <div class="container">
 
-                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-                    <input type="hidden" name="portfolio-filter" id="filter-all" checked>
-                    <input type="hidden" name="portfolio-filter" id="filter-app">
-                    <input type="hidden" name="portfolio-filter" id="filter-product">
-                    <input type="hidden" name="portfolio-filter" id="filter-branding">
-
-                    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-                        <li><label for="filter-all" checked>Todos</label></li>
-                        <li><label for="filter-app">Tratamientos</label></li>
-                        <li><label for="filter-product">Productos</label></li>
-                        <li><label for="filter-branding">Casos clínicos</label></li>
-                    </ul><!-- End Portfolio Filters -->
-
-                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200" >
-
-                        <!-- Tratamientos -->
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                <!-- Tratamientos -->
+                <div class="portfolio-category" id="portfolio-tratamientos" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header text-center text-md-start mb-4">
+                        <h3>Tratamientos destacados</h3>
+                        <p>Procedimientos clínicos pensados para devolver salud y confianza a cada sonrisa infantil.</p>
+                    </div>
+                    <div class="row gy-4">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/limpieza-ultrasonidos.jpg"
                                 class="img-fluid" alt="Limpieza dental profesional">
                             <div class="portfolio-info">
@@ -48,12 +38,12 @@
                                 <a href="./public/img/limpieza-ultrasonidos.jpg"
                                     title="Limpieza Profesional" data-gallery="portfolio-gallery-tratamientos"
                                     class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Más detalles" class="details-link"><i
+                                <a href="#" title="Más detalles" class="details-link"><i
                                         class="bi bi-link-45deg"></i></a>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/ortodoncia-estética.jpg"
                                 class="img-fluid" alt="Ortodoncia estética con brackets de zafiro">
                             <div class="portfolio-info">
@@ -67,7 +57,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/blanqueamiento-LED.jpg"
                                 class="img-fluid" alt="Blanqueamiento dental con lámpara LED">
                             <div class="portfolio-info">
@@ -81,7 +71,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/sellantes-pediátricos.jpg" class="img-fluid"
                                 alt="Sellantes dentales pediátricos">
                             <div class="portfolio-info">
@@ -95,7 +85,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/endodoncia.jpg" class="img-fluid" alt="Tratamiento de endodoncia">
                             <div class="portfolio-info">
                                 <h4>Endodoncia</h4>
@@ -107,7 +97,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/ortodoncia-invisible.jpg" class="img-fluid" alt="Ortodoncia invisible">
                             <div class="portfolio-info">
                                 <h4>Ortodoncia Invisible</h4>
@@ -118,9 +108,17 @@
                                         class="bi bi-link-45deg"></i></a>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Productos -->
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                <!-- Productos -->
+                <div class="portfolio-category mt-5 pt-5 border-top" id="portfolio-productos" data-aos="fade-up" data-aos-delay="150">
+                    <div class="category-header text-center text-md-start mb-4">
+                        <h3>Productos recomendados</h3>
+                        <p>Insumos odontológicos y kits para continuar el cuidado en casa.</p>
+                    </div>
+                    <div class="row gy-4">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/pasta-infantil.jpg" class="img-fluid"
                                 alt="Pasta dental infantil sabor fresa">
                             <div class="portfolio-info">
@@ -129,12 +127,12 @@
                                 <a href="./public/img/pasta-infantil.jpg" title="Pasta Dental Infantil"
                                     data-gallery="portfolio-gallery-productos" class="glightbox preview-link"><i
                                         class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Ficha del producto" class="details-link"><i
+                                <a href="#" title="Ficha del producto" class="details-link"><i
                                         class="bi bi-link-45deg"></i></a>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/cepillo-sonico.jpg" class="img-fluid"
                                 alt="Cepillo eléctrico sónico">
                             <div class="portfolio-info">
@@ -148,7 +146,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/kit-blanqueamiento.jpg" class="img-fluid"
                                 alt="Kit de blanqueamiento domiciliario">
                             <div class="portfolio-info">
@@ -162,7 +160,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/enjuague-antiséptico.jpg" class="img-fluid"
                                 alt="Enjuague bucal sin alcohol">
                             <div class="portfolio-info">
@@ -176,7 +174,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/hilo-dental.jpg" class="img-fluid" alt="Hilo dental suave">
                             <div class="portfolio-info">
                                 <h4>Hilo Dental Premium</h4>
@@ -188,7 +186,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/gel-fluor.jpg" class="img-fluid" alt="Gel con flúor para fortalecimiento">
                             <div class="portfolio-info">
                                 <h4>Gel Fluorado</h4>
@@ -199,9 +197,17 @@
                                         class="bi bi-link-45deg"></i></a>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Casos clínicos -->
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                <!-- Casos clínicos -->
+                <div class="portfolio-category mt-5 pt-5 border-top" id="portfolio-casos" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header text-center text-md-start mb-4">
+                        <h3>Casos clínicos</h3>
+                        <p>Historias reales que muestran la evolución y resultados logrados en nuestra consulta.</p>
+                    </div>
+                    <div class="row gy-4">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/restauración-estética.jpg" class="img-fluid"
                                 alt="Caso clínico restauración estética">
                             <div class="portfolio-info">
@@ -210,12 +216,12 @@
                                 <a href="./public/img/restauración-estética.jpg" title="Restauración Antes"
                                     data-gallery="portfolio-gallery-casos" class="glightbox preview-link"><i
                                         class="bi bi-zoom-in"></i></a>
-                                <a href="./portfolio-details.html" title="Ver caso" class="details-link"><i
+                                <a href="#" title="Ver caso" class="details-link"><i
                                         class="bi bi-link-45deg"></i></a>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/rehabilitación-implantes.jpg" class="img-fluid"
                                 alt="Rehabilitación completa con implantes">
                             <div class="portfolio-info">
@@ -229,7 +235,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/ortodoncia-interceptiva.jpg" class="img-fluid"
                                 alt="Ortodoncia interceptiva en paciente pediátrico">
                             <div class="portfolio-info">
@@ -243,7 +249,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/periodoncia-caso.jpg" class="img-fluid" alt="Caso periodoncia">
                             <div class="portfolio-info">
                                 <h4>Tratamiento Periodontal</h4>
@@ -255,7 +261,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <img src="./public/img/rehabilitacion-estetica-caso.jpg" class="img-fluid" alt="Rehabilitación estética completa">
                             <div class="portfolio-info">
                                 <h4>Rehabilitación Estética Completa</h4>
@@ -266,49 +272,14 @@
                                         class="bi bi-link-45deg"></i></a>
                             </div>
                         </div>
-
-                    </div><!-- End Portfolio Container -->
+                    </div>
                 </div>
+
             </div>
-        </section><!-- /Portfolio Section -->
+        </section>
     </main>
     <footer></footer>
-    
-    <script>
-        // Filtrado simple: muestra solo los .portfolio-item de la categoría seleccionada
-        (function () {
-            const labels = document.querySelectorAll('.portfolio-filters li label');
-            const container = document.querySelector('.isotope-container');
-            if (!container || labels.length === 0) return;
-            const items = Array.from(container.querySelectorAll('.portfolio-item'));
 
-            function applyFilter(filterId) {
-                if (filterId === 'filter-all') {
-                    items.forEach(i => i.style.display = '');
-                } else {
-                    items.forEach(i => {
-                        i.style.display = i.classList.contains(filterId) ? '' : 'none';
-                    });
-                }
-                // marcar filtro activo (usa la clase que ya tiene el template: .filter-active)
-                labels.forEach(lbl => lbl.parentElement.classList.remove('filter-active'));
-                const activeLabel = Array.from(labels).find(l => l.getAttribute('for') === filterId);
-                if (activeLabel) activeLabel.parentElement.classList.add('filter-active');
-            }
-
-            // Asignar eventos
-            labels.forEach(label => {
-                label.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const filterId = this.getAttribute('for');
-                    applyFilter(filterId);
-                });
-            });
-
-            // estado inicial: "Todos"
-            applyFilter('filter-all');
-        })();
-    </script>
     <script src="../public/vendor/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 </body>
 
